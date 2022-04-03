@@ -21,6 +21,8 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         tableViewSimpson.register(Simpson__Cell.nibName, forCellReuseIdentifier: Simpson__Cell.identifier)
     }
 
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return simpImageName.count
     }
