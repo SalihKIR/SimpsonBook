@@ -20,7 +20,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         tableViewSimpson.dataSource = self
         tableViewSimpson.register(Simpson__Cell.nibName, forCellReuseIdentifier: Simpson__Cell.identifier)
     }
-//
+
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
