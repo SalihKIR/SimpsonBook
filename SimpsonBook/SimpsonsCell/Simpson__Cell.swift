@@ -8,7 +8,8 @@
 import UIKit
 
 class Simpson__Cell: UITableViewCell {
-
+    var simpson : [String] = []
+    @IBOutlet weak var simplabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -17,7 +18,21 @@ class Simpson__Cell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        
     }
     
+    func sehirleriEntegre (simp : String) {
+        simplabel.text = simp
+    }
+    
+}
+
+extension Simpson__Cell {
+    static var identifier: String {
+        return String(describing: self)
+    }
+    
+    static var nibName: UINib {
+        return UINib(nibName: identifier, bundle: nil)
+    }
 }

@@ -1,25 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Second View Contorller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewContorller" id="Y6W-OH-hqX" customClass="SecondViewContorller" customModule="SimpsonBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzY-UC-eRQ">
+                                <rect key="frame" x="0.0" y="94" width="414" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5Kv-y3-RL5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6nf-aQ-6Hw">
+                                <rect key="frame" x="10" y="234" width="394" height="528"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AzY-UC-eRQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ECL-pw-Zis"/>
+                            <constraint firstItem="6nf-aQ-6Hw" firstAttribute="top" secondItem="AzY-UC-eRQ" secondAttribute="bottom" constant="100" id="Huk-fl-orT"/>
+                            <constraint firstItem="AzY-UC-eRQ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="llq-gt-Jn4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="AzY-UC-eRQ" secondAttribute="trailing" id="mqz-i6-334"/>
+                            <constraint firstItem="6nf-aQ-6Hw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="n7k-J2-tu3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6nf-aQ-6Hw" secondAttribute="trailing" constant="10" id="qAb-OX-IIg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="6nf-aQ-6Hw" secondAttribute="bottom" constant="100" id="u6I-UD-xXC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="SimpsonLabel" destination="AzY-UC-eRQ" id="S0Q-6H-dop"/>
+                        <outlet property="simpsonImage" destination="6nf-aQ-6Hw" id="B0N-xv-ayL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-83" y="-19"/>
         </scene>
     </scenes>
     <resources>

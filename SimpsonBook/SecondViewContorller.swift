@@ -9,21 +9,20 @@ import UIKit
 
 class SecondViewContorller: UIViewController {
 
+    var simpsonimage: [UIImage] = []
+    var simpsons: String = ""
+    @IBOutlet weak var simpsonImage: UIImageView!
+    @IBOutlet weak var SimpsonLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //SimpsonLabel.text = simpsonimageName
+        SimpsonLabel.text = simpsons
+        setImage(image: simpsons)
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setImage(image: String) {
+        simpsonImage.image = UIImage(named: image)
     }
-    */
 
 }
