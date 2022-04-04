@@ -21,7 +21,7 @@ class Simpson__Cell: UITableViewCell {
         
     }
     
-    func sehirleriEntegre (simp : String) {
+    func simpsonset (simp : String) {
         simplabel.text = simp
     }
     

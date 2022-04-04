@@ -11,6 +11,7 @@ class SecondViewContorller: UIViewController {
 
     var simpsonimage: [UIImage] = []
     var simpsons: String = ""
+    
     @IBOutlet weak var simpsonImage: UIImageView!
     @IBOutlet weak var SimpsonLabel: UILabel!
     override func viewDidLoad() {
