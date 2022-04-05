@@ -9,6 +9,8 @@ import UIKit
 
 class Simpson__Cell: UITableViewCell {
     var simpson : [String] = []
+    @IBOutlet weak var parentContentView: UIView!
+    @IBOutlet weak var childView: UIView!
     @IBOutlet weak var simplabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,6 +20,8 @@ class Simpson__Cell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
+        parentContentView.layer.cornerRadius = 18
+        childView.layer.cornerRadius = 18
         
     }
     
