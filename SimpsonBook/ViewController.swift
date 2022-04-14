@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  SimpsonBook
-//
-//  Created by Salih KIR on 2.04.2022.
-//
-
 import UIKit
  var Simpson = 5
 class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSource{
@@ -17,7 +10,6 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         super.viewDidLoad()
         tableViewSimpson.delegate = self
         tableViewSimpson.dataSource = self
-        
         tableViewSimpson.register(Simpson__Cell.nibName, forCellReuseIdentifier: Simpson__Cell.identifier)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,19 +25,11 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         let check = SecondViewContorller.instantiate(storyboard: .check)
         navigationController?.pushViewController(check, animated: true)
         check.simpsons = simpImageName[indexPath.row]
-         
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150.0
         
-    }
-
-
-    @IBAction func TryButton(_ sender: Any) {
-        let check = SecondViewContorller.instantiate(storyboard: .check)
-        navigationController?.pushViewController(check, animated: true)
-       // check.simpsonimage = simpImage
     }
 }
 
