@@ -4,6 +4,7 @@ import UIKit
 public enum StoryboardNames: String {
     case main = "Main"
     case check = "Storyboard"
+    case deneme = "deneme"
 }
 
 protocol StoryboardSettings {
